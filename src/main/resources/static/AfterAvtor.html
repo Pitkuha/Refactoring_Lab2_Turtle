@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/style-afteravtor.css">
+    <title>AfterAvto</title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="icon" href="data:,">
+</head>
+<body>
+<audio id="mySoundClip">
+    <source src="./Escape%20From%20Tarkov%202021.01.18%20-%2011.33.34.02.DVR%20(mp3cut.net).mp3"></source>
+</audio>
+
+    <div class="buttons_go">
+        <p><input type="button" class="but" value="PERSONAGE" name="per" onclick="pers()"></p>
+        <p><input type="button" class="but" value="TRADERS" name="traders" onclick="traders()"></p>
+        <p><input type="button" class="but" value="TASKS" name="tasks" onclick="tasks()"></p>
+        <form action="http://localhost:8080/logout">
+            <input class="but" type="submit" value="LOGOUT">
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+<script>
+    var audio = $("#mySoundClip")[0];
+    $(".but").mouseenter(function() {
+        audio.play();
+    });
+
+    function pers()
+    {
+        window.location = "person.html"
+    }
+    function traders()
+    {
+        window.location = "traders.html"
+    }
+    function tasks()
+    {
+        window.location = "tasks.html"
+    }
+</script>
+</body>
+</html>
